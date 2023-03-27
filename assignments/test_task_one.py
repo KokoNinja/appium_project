@@ -33,4 +33,4 @@ class TestLocationMedia(AppiumConfig):
         self.driver.find_element(AppiumBy.XPATH, "//android.widget.EditText[@text='Confirm Password*']").send_keys(
             "test123")
         self.driver.find_element(AppiumBy.XPATH,
-                                 "//android.widget.EditText[@text='android.widget.CheckBox']").click()
+                                 "//android.widget.CheckBox[@resource-id ='com.bsl.hyundai:id/checkAcceptTermsCondition']").click()
