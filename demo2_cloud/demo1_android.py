@@ -1,7 +1,9 @@
 from appium import webdriver
+from appium.webdriver.common.appiumby import AppiumBy
 
 des_cap = {
-    "app": "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c",
+    "app": "bs://a7edff5ce079bede689f0e24a643f1b3aad734b2",
+    "platformVersion":"9.0",
     "deviceName": "Google Pixel 3",
     'bstack:options': {
         "projectName": "First Python project",
@@ -13,8 +15,11 @@ des_cap = {
     }
 
 }
-driver=webdriver.Remote(command_executor="http://127.0.0.1:4723/wd/hub",desired_capabilities=des_cap)
+driver=webdriver.Remote(command_executor="http://hub.browserstack.com/wd/hub",desired_capabilities=des_cap)
 driver.implicitly_wait(30)
 
 driver.find_element(AppiumBy.XPATH,"//android.widget.TextView[@text='Dismiss']").click()
 driver.find_element(AppiumBy.XPATH,"//android.widget.TextView[@text='Sign in']").click()
+print(driver.page_source)
+
+driver.quit()

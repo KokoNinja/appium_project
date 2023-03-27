@@ -22,6 +22,8 @@ class AppiumConfig:
 
 class TestAndroidDeviceLocal(AppiumConfig):
     def test_invalid_login(self):
+
+        if len(self.driver.find_element())
         self.driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Dismiss']").click()
         self.driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Sign in']").click()
         self.driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Sign in']").click()
